@@ -18,8 +18,14 @@ jobs:
       - name: Download
         run: |
           curl -L https://github.com/zhzy0077/assembly-lines/releases/download/v0.1/assembly-lines-linux-x64 -o assembly-lines-linux-x64
-          chmod + x assembly-lines-linux-x64
+          chmod +x assembly-lines-linux-x64
 
       # Runs a set of commands using the runners shell
       - name: Run
+        env:
+          gist_id: ${{ secrets.GIST_ID }}
+          git_token: ${{ secrets.GIT_TOKEN }}
+          corp_id: ${{ secrets.CORP_ID }}
+          corp_secret: ${{ secrets.CORP_SECRET }}
+          sub_url: ${{ secrets.SUB_URL }}
         run: ./assembly-lines-linux-x64 config.yml
