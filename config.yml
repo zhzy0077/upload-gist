@@ -1,11 +1,11 @@
 assembly_line:
   - type: download
     parameters:
-      url: https://github.com/tindy2013/subconverter/releases/download/v0.6.4/subconverter_aarch64.tar.gz
-      destination: subconverter_aarch64.tar.gz
+      url: https://github.com/tindy2013/subconverter/releases/download/v0.6.4/subconverter_linux64.tar.gz
+      destination: subconverter_linux64.tar.gz
   - type: decompress
     parameters:
-      path: subconverter_aarch64.tar.gz
+      path: subconverter_linux64.tar.gz
       destination: .
   - type: command
     parameters:
