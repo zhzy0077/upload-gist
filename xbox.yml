@@ -1,4 +1,4 @@
-assembly_line:
+workflows:
   - type: http
     parameters:
       url: https://news.xbox.com/en-us/feed/
