@@ -1,11 +1,11 @@
 
 
-name: Run
+name: XBOX
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' 
+    - cron: '0 * * * *' 
 
 jobs:
 
@@ -23,9 +23,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run
         env:
-          gist_id: ${{ secrets.GIST_ID }}
-          git_token: ${{ secrets.GIT_TOKEN }}
           corp_id: ${{ secrets.CORP_ID }}
           corp_secret: ${{ secrets.CORP_SECRET }}
-          sub_url: ${{ secrets.SUB_URL }}
-        run: ./assembly-lines-linux-x64 config.yml
+        run: ./assembly-lines-linux-x64 xbox.yml
