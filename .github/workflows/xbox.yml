@@ -17,12 +17,12 @@ jobs:
 
       - name: Download
         run: |
-          curl -L https://github.com/zhzy0077/assembly-lines/releases/download/v0.2/assembly-lines-linux-x64 -o assembly-lines-linux-x64
-          chmod +x assembly-lines-linux-x64
+          curl -L https://github.com/zhzy0077/workflows/releases/download/v0.2/workflows-linux-x64 -o workflows-linux-x64
+          chmod +x workflows-linux-x64
 
       # Runs a set of commands using the runners shell
       - name: Run
         env:
           corp_id: ${{ secrets.CORP_ID }}
           corp_secret: ${{ secrets.CORP_SECRET }}
-        run: ./assembly-lines-linux-x64 xbox.yml
+        run: ./workflows-linux-x64 xbox.yml
